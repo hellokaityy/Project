@@ -1,16 +1,44 @@
 
+@font-face {
+  font-family: "theBoldFont";
+  src: url("/fonts/theboldfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("/fonts/Century\ Gothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("/fonts/911Fonts.com_CenturyGothicBold__-_911fonts.com_fonts_pMgo.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 .logo {
   width: 80px;
 }
 .header {
   font-size: 40px;
   vertical-align: auto;
+  background-image: url(images/cornhole.JPG);
+  background-position: absolute;
+  font-family: "theBoldFont";
+}
+body {
+
 }
 .topnav {
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   text-decoration: none;
+  font-family: "CenturyGothic";
 }
 .topnav a {
   float: left;
@@ -24,6 +52,7 @@
 }
 .topnav a:hover {
   background-color: #f5f5f5;
+  opacity: 75%;
   font-weight: bold;
 }
 
@@ -32,8 +61,9 @@
 }
 
 table {
-  padding: 20px;
+  width: 100%;
 }
+
 .socials {
   width: 50px;
 }
@@ -67,4 +97,66 @@ table {
 .slideshow {
     margin-right: auto;
     margin-left: auto;
+}
+.sectionHeader {
+  color: white;
+  margin: auto;
+}
+
+.pageLayout {
+  height: 100%;
+  color: white;
+  text-shadow: 3px 3px 4px black;
+}
+
+#events {
+  background-image: url("images/eventsVPbanner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 250px;
+}
+
+#marketing {
+  background-image: url("images/marketingBanner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 300%;
+  background-size: cover;
+}
+
+#video {
+  width: 80%;
+margin: auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: "theBoldFont";
+}
+
+p {
+  font-family: "CenturyGothic";
+  color: white;
+  text-shadow: 3px 3px 4px black;
+}
+
+button {
+  background-color: white;
+  opacity: 60%;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 16px;
+  font-family: "theBoldFont";
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  outline: none;
+}
+
+#mission {
+  background-image: url(image/VPEvents.jpg);
 }
