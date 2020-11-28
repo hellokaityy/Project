@@ -17,130 +17,281 @@
         <a href="marketing.html">Marketing</a>
         <a href="events.html">Events</a>
         <a href="contact.html">Contact Me!</a>
-        <a href="sitemap.html">Sitemap</a>
       </div>
     </div>
     <div class="pageLayout">
-      <div id="marketing">
-        <h1>Marketing</h1>
+      <p class="sectionHeader">Kaity from Marketing</p>
+        <div id = "marketing">
+
+        </div>
+      <div id="slideshow">
+        <br />
+        <img width = "80%" src="images/SpringCarnivalfront.png" alt="Panda Image" id="marketingImage" />
+        <p id="caption">Spring Carnival Shirt Design</p>
+        <!-- <button id = "back-btn">&#10094</button>
+        <button id = "forward-btn">&#10095</button> -->
       </div>
-      <div class="slideshow">
-        <img
-          class="mySlides"
-          src="images/OffsetCountdown3Days.png"
-          alt="Offset Countdown"
-        />
-        <img
-          class="mySlides"
-          src="images/OffsetCountdown2days.png"
-          alt="Offset Countdown"
-        />
-        <img
-          class="mySlides"
-          src="images/OffsetCountdowntoday.png"
-          alt="Offset Countdown"
-        />
-        <img
-          class="mySlides"
-          src="images/HauntedEscapefrontswipe.jpg"
-          alt="Haunted Escape Room Poster"
-        />
-        <img
-          class="mySlides"
-          src="images/PosterResized-01.png"
-          alt="Spring concert Poster"
-        />
-        <img
-          class="mySlides"
-          src="images/Screen Shot 2019-03-04 at 2.54.11 PM.png"
-          alt="Spring Week Logo"
-        />
-        <div>
-          <button onclick="plusDivs(-1)" class="slideButton">&#10094;</button>
-          <button onclick="plusDivs(+1)" class="slideButton">&#10095;</button>
-        </div>
-        <div id="giveaways">
-          <table>
-            <tr>
-              <td>
-                <img
-                  src="images/giveaways/glasses.jpg"
-                  alt="Blue Blocking Glasses"
-                  width="30%"
-                />
-              </td>
-              <td>
-                <img
-                  src="images/giveaways//keychain.jpg"
-                  alt="No Touch Keychain"
-                  width="30%"
-                />
-              </td>
-              <td>
-                <img
-                  src="images/giveaways/moodphone.jpg"
-                  alt="phone wallet"
-                  width="30%"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td><img src="images/giveaways/pen.jpg" alt="Stylus Pen" width="30%" /></td>
-              <td>
-                <img
-                  src="images/giveaways/stationarydisplay.jpg"
-                  id="stationary"
-                  alt="Stationary Kit"
-                  width="30%"
-                />
-              </td>
-              <td>
-                <img
-                  src="images/giveaways/straw.jpg"
-                  alt="reusable straw"
-                  id="straw"
-                  width="30%"
-                />
-              </td>
-            </tr>
-          </table>
-        </div>
+      <div id="giveaways">
+        <table id = "giveawayTable">
+          <tr>
+            <td>
+              <img
+                src="images/giveaways/glasses.jpg"
+                alt="Blue Blocking Glasses"
+                width="100%"
+                id = "glasses"
+              />
+            </td>
+            <td>
+              <img
+                src="images/giveaways//keychain.jpg"
+                alt="No Touch Keychain"
+                width="100%"
+              />
+            </td>
+            <td>
+              <img
+                src="images/giveaways/moodphone.jpg"
+                alt="phone wallet"
+                width="100%"
+                id = "phone"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="images/giveaways/pen.jpg"
+                alt="Stylus Pen"
+                id = "pen"
+                width="100%"
+              />
+            </td>
+            <td>
+              <img
+                src="images/giveaways/stationarydisplay.jpg"
+                id="stationary"
+                alt="Stationary Kit"
+                width="100%"
+              />
+            </td>
+            <td>
+              <img
+                src="images/giveaways/straw.jpg"
+                alt="reusable straw"
+                id="straw"
+                width="100%"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img
+                src="images/giveaways/techpack.jpg"
+                alt="Tech Pack"
+                width="100%"
+                id = "techpack"
+              />
+            </td>
+            <td>
+              <img
+                src="images/giveaways/tumblr.jpg"
+                alt="Tumbler"
+                width="100%"
+                id = "tumblr"
+              />
+            </td>
+            <td>
+              <img
+                src="images/giveaways/waterbottle.jpg"
+                alt="Waterbottle"
+                width="100%"
+                id = "bottle"
+              />
+            </td>
+          </tr>
+        </table>
       </div>
       <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
+           const slides = [
+        "images/OffsetCountdown2days.png",
+        "images/OffsetCountdown3Days.png",
+        "images/PosterResized-01.png"
+      ];
 
-        function plusDivs(n) {
-          showDivs((slideIndex += n));
+      const caption = [
+        "Offset Countdown Calendar",
+        "Offset Countdown Calendar 2",
+        "Offset Poster"
+      ];
+
+      let i = 0;
+      let c = 0;
+      let d = 0;
+      function slideShow() {
+        let marketingImage = document.getElementById("marketingImage");
+        let marketingCaption = document.getElementById("caption");
+        if (i === slides.length) {
+          i = 0;
         }
-
-        function showDivs(n) {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          if (n > x.length) {
-            slideIndex = 1;
-          }
-          if (n < 1) {
-            slideIndex = x.length;
-          }
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          x[slideIndex - 1].style.display = "block";
+        if (d === caption.length) {
+          d = 0;
         }
+        marketingImage.src = slides[i];
+        marketingCaption.innerHTML = caption[d];
+        // document.querySelector("img").style.borderColor = colors[c].value;
+        marketingImage;
+        marketingCaption;
+        console.log(i);
+        console.log(d);
+        i++;
+        d++;
+        setTimeout(slideShow, 1000)
+      }
+    
 
-        function changePhoto() {
+      document.getElementById("back-btn").onclick = slideShow;
+
+        function changeStationary() {
           document.getElementById("stationary").src =
             "images/giveaways/stationary.jpg";
         }
 
-        function revert() {
-          document.getElementById("stationary").src = "images/giveaways/stationarydisplay.jpg";
+        function revertStationary() {
+          document.getElementById("stationary").src =
+            "images/giveaways/stationarydisplay.jpg";
+        }
+        function changeGlasses() {
+          document.getElementById("glasses").src =
+            "images/giveaways/glasseszoomed.jpg";
         }
 
-        document.getElementById("stationary").onmouseover = changePhoto;
-        document.getElementById("stationary").onmouseleave = revert;
+        function revertGlasses() {
+          document.getElementById("glasses").src =
+            "images/giveaways/glasses.jpg";
+        }
+
+        function changeStraw() {
+          document.getElementById("straw").src =
+            "images/giveaways/strawzoomed.jpg";
+        }
+
+        function revertStraw() {
+          document.getElementById("straw").src =
+            "images/giveaways/straw.jpg";
+        }
+
+        function changeTechpack() {
+          document.getElementById("techpack").src =
+            "images/giveaways/techpackzoomed.jpg";
+        }
+
+        function revertTechpack() {
+          document.getElementById("techpack").src =
+            "images/giveaways/techpack.jpg";
+        }
+
+        function changeTumblr() {
+          document.getElementById("tumblr").src =
+            "images/giveaways/tumblrzoom.jpg";
+        }
+
+        function revertTumblr() {
+          document.getElementById("tumblr").src =
+            "images/giveaways/tumblr.jpg";
+        }
+
+        function changePen() {
+          document.getElementById("pen").src =
+            "images/giveaways/penzoomed.jpg";
+        }
+
+        function revertPen() {
+          document.getElementById("pen").src =
+            "images/giveaways/pen.jpg";
+        }
+
+        function changeBottle() {
+          document.getElementById("bottle").src =
+            "images/giveaways/waterbottlezoomed.jpg";
+        }
+
+        function revertBottle() {
+          document.getElementById("bottle").src =
+            "images/giveaways/waterbottle.jpg";
+        }
+
+        function changePhone() {
+          document.getElementById("phone").src =
+            "images/giveaways/blackphone.jpg";
+        }
+
+        function revertPhone() {
+          document.getElementById("phone").src =
+            "images/giveaways/moodphone.jpg";
+        }
+
+        document.getElementById("stationary").onmouseover = changeStationary;
+        document.getElementById("stationary").onmouseleave = revertStationary;
+        document.getElementById("glasses").onmouseover = changeGlasses;
+        document.getElementById("glasses").onmouseleave = revertGlasses;
+        document.getElementById("straw").onmouseover = changeStraw;
+        document.getElementById("straw").onmouseleave = revertStraw;
+        document.getElementById("techpack").onmouseover = changeTechpack;
+        document.getElementById("techpack").onmouseleave = revertTechpack;
+        document.getElementById("tumblr").onmouseover = changeTumblr;
+        document.getElementById("tumblr").onmouseleave = revertTumblr;
+        document.getElementById("pen").onmouseover = changePen;
+        document.getElementById("pen").onmouseleave = revertPen;
+        document.getElementById("bottle").onmouseover = changeBottle;
+        document.getElementById("bottle").onmouseleave = revertBottle;
+        document.getElementById("phone").onmouseover = changePhone;
+        document.getElementById("phone").onmouseleave = revertPhone;
       </script>
+    </div>
+    <div class="footer">
+      <h2>Kaity from cab</h2>
+      <table>
+        <tr>
+          <th>STAY CONNECTED</th>
+          <th style = "width: 50%;">COMMITTED TO CAB</th>
+          <th>SITEMAP</th>
+        </tr>
+        <tr>
+          <td>
+            <a style="color: white; vertical-align: top;" href="https://www.instagram.com/BabsonCAB"
+              >CAB Instagram</a
+            >
+            <br>
+            <a style="color: white" href="https://www.facebook.com/BabsonCAB"
+              >CAB Facebook</a
+            >
+          </td>
+          <td rowspan="4">
+            Since freshman year, I've been committed to CAB and have loved
+            putting on events for the Babson Community. I strive to make every
+            event the best it can possibly be, and bring a "can-do" attitude to
+            everything I do!
+            <p>
+              <a style="color: lime" href="mission.html"
+                >Read my full mission statement</a
+              >
+            </p>
+          </td>
+          <td><a style = "color: white" href="index.html">Homepage &#10095
+          </a>
+            <br>
+            <a style = "color: white" href="mission.html">Mission &#10095</a>
+            <br>
+            <a style = "color: white" href="events.html">Events Experience &#10095</a>
+            <br>
+            <a style = "color: white"href="marketing.html">Marketing Experience &#10095</a>
+            <br>
+            <a style = "color: white" href="contact.html">Contact &#10095</a>
+          </td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
