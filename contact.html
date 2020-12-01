@@ -9,7 +9,7 @@
   <body>
     <div class="header">
       <a href="index.html"
-        ><img src="images/kaitylogo.JPG " alt="Logo" class="logo"
+        ><img src="images/kaitylogo.png " alt="Logo" class="logo"
       /></a>
       Kaity from CAB
       <div class="topnav">
@@ -35,6 +35,7 @@
                 <label for="comments"
                   >Questions about my campaign? Leave them here!</label
                 >
+                <p id = "alert"></p>
               </div>
               <div>
                 <textarea
@@ -46,8 +47,17 @@
                 ></textarea>
               </div>
             </div>
-            <button type="submit" name="submit-button">SUBMIT</button>
+            <button type="submit" id = "submit" name="submit-button">SUBMIT</button>
           </div>
+          <script>
+            function validate() {
+              let field = document.getElementById("comments");
+            if (field == "") {
+              document.getElementById("alert").innerHTML = "please enter a comment";
+            }
+            }
+            document.getElementById("submit").onclick = validate;
+          </script>
         </td>
         <td>
           <div class="contact-socials">
@@ -70,7 +80,7 @@
         <tr>
           <th>STAY CONNECTED</th>
           <th style = "width: 50%;">COMMITTED TO CAB</th>
-          <th>SITEMAP</th>
+          <th><a href="sitemap.html" style="color: white; text-decoration: underline;">SITEMAP</a></th>
         </tr>
         <tr>
           <td>
@@ -108,5 +118,6 @@
         </tr>
       </table>
     </div>
+
   </body>
 </html>

@@ -9,7 +9,7 @@
   <body>
     <div class="header">
       <a href="index.html"
-        ><img src="images/kaitylogo.JPG " alt="Logo" class="logo"
+        ><img src="images/kaitylogo.png " alt="Logo" class="logo"
       /></a>
       Kaity from CAB
       <div class="topnav">
@@ -21,17 +21,23 @@
     </div>
     <div class="pageLayout">
       <p class="sectionHeader">Kaity from Marketing</p>
-        <div id = "marketing">
+        <!-- <div id = "marketing">
 
-        </div>
+        </div> -->
+        <p>        Before starting my year as Co-VP of Marketing, I knew I wanted to help streamline CAB's marketing efforts and create a firm brand guideline to help participants recognize CAB events more easily! You can see from the slideshow below some of the newly branded posters. Unique events like spring concert still have their own artistic flair to help differentiate them as special events.
+        </p>
       <div id="slideshow">
         <br />
-        <img width = "80%" src="images/SpringCarnivalfront.png" alt="Panda Image" id="marketingImage" />
-        <p id="caption">Spring Carnival Shirt Design</p>
-        <!-- <button id = "back-btn">&#10094</button>
-        <button id = "forward-btn">&#10095</button> -->
+        <button id = "marketing-btn">Click to view some of my flyers & posters</button>
+       <p></p>
+        <img  width = 100%; id = "marketingImages" src="images/slideshow/OffsetCountdown2days.png" alt="Marketing Poster Examples" id="marketingImage" />
+        <p id="caption" style="text-align: center;">Spring Carnival Shirt Design</p>
+</div>
+<p>In addition to creating legible, fun, and bold graphics, it's also my responsibility to ideate new and innovative marketing strategies such as the upcoming events board which is located in the Reynold's Campus Center, and where our 2020 Spring Concert Artist board was located. Here, we planned to take down a picture of an artist each day until there were only three left and we would have a reveal party with ticket raffles and free food. Unfortunately this event was cancelled due to the COVID-19 Pandemic</p>
+<img src="images/springconcertboard.JPG" alt="Spring Concert Artist Reveal Board" width="80%" id="springConcertBoard">
       </div>
       <div id="giveaways">
+        <p>As one of the responsibilities as VP of Marketing, I was charged with ordering fun giveaways for events and for our surprise Pop-Up booths. Below is a selection of my favorites!</p>
         <table id = "giveawayTable">
           <tr>
             <td>
@@ -114,43 +120,6 @@
         </table>
       </div>
       <script>
-           const slides = [
-        "images/OffsetCountdown2days.png",
-        "images/OffsetCountdown3Days.png",
-        "images/PosterResized-01.png"
-      ];
-
-      const caption = [
-        "Offset Countdown Calendar",
-        "Offset Countdown Calendar 2",
-        "Offset Poster"
-      ];
-
-      let i = 0;
-      let c = 0;
-      let d = 0;
-      function slideShow() {
-        let marketingImage = document.getElementById("marketingImage");
-        let marketingCaption = document.getElementById("caption");
-        if (i === slides.length) {
-          i = 0;
-        }
-        if (d === caption.length) {
-          d = 0;
-        }
-        marketingImage.src = slides[i];
-        marketingCaption.innerHTML = caption[d];
-        // document.querySelector("img").style.borderColor = colors[c].value;
-        marketingImage;
-        marketingCaption;
-        console.log(i);
-        console.log(d);
-        i++;
-        d++;
-        setTimeout(slideShow, 1000)
-      }
-    
-
         function changeStationary() {
           document.getElementById("stationary").src =
             "images/giveaways/stationary.jpg";
@@ -230,6 +199,72 @@
             "images/giveaways/moodphone.jpg";
         }
 
+        const slides = [
+        "images/slideshow/bingoflyer.JPG",
+        "images/slideshow/bonme-02.JPG",
+        "images/slideshow/bonmeinstructions-02.JPG",
+        "images/slideshow/ConcertSurvey1-01.JPG",
+        "images/slideshow/engagenotice-01.JPG",
+        "images/slideshow/fallreviewcover-02.JPG",
+        "images/slideshow/halloweenoverview-02.JPG",
+        "images/slideshow/HauntedEscapefront.JPG",
+        "images/slideshow/minigolfcover-02.JPG",
+        "images/slideshow/OffsetCountdown2days.png",
+        "images/slideshow/OffsetCountdown3Days.png",
+        "images/slideshow/OffsetCountdowntoday.png",
+        "images/slideshow/roxycover-02.JPG",
+        "images/slideshow/roxyinstructions-02.JPG",
+        "images/slideshow/SpringCarnivalShirt-01.jpg",
+        "images/slideshow/tiedyemasks.JPG"
+      ];
+
+      const caption = [
+        "Bingo Flyer",
+        "Bon Me Food Truck Flyer",
+        "Bon Me Food Truck Instruction List",
+        "Spring Concert Survey Advertisement",
+        "Informative Flyer for Downloading the Engage App",
+        "Fall Review Photo Contest Flyer",
+        "Halloween Events Overview Poster",
+        "Haunted Escape Room with photoshopped picture of Tomasso",
+        "Mini Golf Poster",
+        "Spring Concert Countdown Flyer",
+        "Spring Concert Countdown Flyer",
+        "Spring Concert - it's Today!",
+        "Roxy's Grilled Cheese Food Truck Flyer",
+        "Roxy's Grilled Cheese Food Truck Sign Up Instructions",
+        "2019 Spring Carnival T Shirt Design",
+        "Tie Dye Mask Poster"
+      ];
+
+      let i = 0;
+      let d = 0;
+      function slideShow() {
+        let marketingImage = document.getElementById("marketingImages");
+        let marketingCaption = document.getElementById("caption");
+        console.log("running...");
+        if (i === slides.length) {
+          i = 0;
+        }
+        if (d === caption.length) {
+          d = 0;
+        }
+
+        marketingImage.src = slides[i];
+        marketingCaption.innerHTML = caption[d];
+
+        // document.querySelector("img").style.borderColor = colors[c].value;
+        marketingImage;
+        marketingCaption;
+        console.log(i);
+        console.log(d);
+        i++;
+        d++;
+        setTimeout(slideShow, 1000);
+      }
+
+      document.getElementById("marketing-btn").onclick = slideShow;
+
         document.getElementById("stationary").onmouseover = changeStationary;
         document.getElementById("stationary").onmouseleave = revertStationary;
         document.getElementById("glasses").onmouseover = changeGlasses;
@@ -255,7 +290,7 @@
         <tr>
           <th>STAY CONNECTED</th>
           <th style = "width: 50%;">COMMITTED TO CAB</th>
-          <th>SITEMAP</th>
+          <th><a href="sitemap.html" style="color: white; text-decoration: underline;">SITEMAP</a></th>
         </tr>
         <tr>
           <td>
